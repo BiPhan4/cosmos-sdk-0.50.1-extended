@@ -15,19 +15,16 @@ import (
 )
 
 const (
-	flagvestingStart = "vesting-start-time"
-	flagvestingEnd   = "vesting-end-time"
-	flagvestingAmt   = "vesting-amount"
-	flagappendMode   = "append"
-	flagmoduleName   = "module-name"
+	flagmoduleName = "module-name"
 )
 
 // AddStubCmd returns add-stub cobra Command.
 // This command is just for fleshing out how the genesis file can be edited
+// The name 'AddStub' is not very descriptive right now.
 func AddStubCmd(defaultNodeHome string, addressCodec address.Codec) *cobra.Command {
 	cmd := &cobra.Command{
-		Use:   "add-stub [address_or_key_name] [coin][,[coin]]",
-		Short: "Add a stub genesis account to genesis.json",
+		Use:   "add-stub [address_or_key_name]",
+		Short: "return the distribution genesis state",
 		Long:  "NA",
 
 		Args: cobra.ExactArgs(2),
@@ -63,21 +60,13 @@ func AddStubCmd(defaultNodeHome string, addressCodec address.Codec) *cobra.Comma
 				}
 			}
 
-			appendflag, _ := cmd.Flags().GetBool(flagAppendMode)
-			vestingStart, _ := cmd.Flags().GetInt64(flagVestingStart)
-			vestingEnd, _ := cmd.Flags().GetInt64(flagVestingEnd)
-			vestingAmtStr, _ := cmd.Flags().GetString(flagVestingAmt)
 			moduleNameStr, _ := cmd.Flags().GetString(flagModuleName)
 
-			return genutil.AddStub(clientCtx.Codec, addr, appendflag, config.GenesisFile(), args[1], vestingAmtStr, vestingStart, vestingEnd, moduleNameStr)
+			return genutil.AddStub(clientCtx.Codec, addr, config.GenesisFile(), moduleNameStr)
 		},
 	}
 
 	cmd.Flags().String(flags.FlagKeyringBackend, flags.DefaultKeyringBackend, "Select keyring's backend (os|file|kwallet|pass|test)")
-	cmd.Flags().String(flagVestingAmt, "", "amount of coins for vesting accounts")
-	cmd.Flags().Int64(flagVestingStart, 0, "schedule start time (unix epoch) for vesting accounts")
-	cmd.Flags().Int64(flagVestingEnd, 0, "schedule end time (unix epoch) for vesting accounts")
-	cmd.Flags().Bool(flagAppendMode, false, "append the coins to an account already in the genesis.json file")
 	cmd.Flags().String(flagModuleName, "", "module account name")
 	flags.AddQueryFlagsToCmd(cmd)
 

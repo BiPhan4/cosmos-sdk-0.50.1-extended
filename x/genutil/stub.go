@@ -16,21 +16,24 @@ func AddStub(
 	appendAcct bool,
 	genesisFileURL string,
 	moduleName string,
-) (error, distributiontypes.GenesisState) {
+) error {
 
 	appState, appGenesis, err := genutiltypes.GenesisStateFromGenFile(genesisFileURL)
 	// don't need 'parent' appGenesis for now
 	fmt.Println(appGenesis)
 	if err != nil {
 		// return error message and the zero valued GenesisState
-		return fmt.Errorf("failed to unmarshal genesis state: %w", err), distributiontypes.GenesisState{}
+		return fmt.Errorf("failed to unmarshal genesis state: %w", err)
 	}
 
 	distGenState := distributiontypes.GetGenesisStateFromAppState(cdc, appState)
 
+	fmt.Println("The distribution genesis state is")
+	fmt.Println(distGenState)
+
 	// TODO
 	// retrieve the interchainaccounts genesis state and unpack the allowed_messages object--is it a []string or []json.RawMessage?
 
-	return nil, distGenState
+	return nil
 
 }
