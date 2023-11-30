@@ -27,7 +27,7 @@ func AddStubCmd(defaultNodeHome string, addressCodec address.Codec) *cobra.Comma
 		Short: "return the distribution genesis state",
 		Long:  "NA",
 
-		Args: cobra.ExactArgs(2),
+		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx := client.GetClientContextFromCmd(cmd)
 			serverCtx := server.GetServerContextFromCmd(cmd)
