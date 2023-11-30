@@ -10,7 +10,7 @@ require (
 	cosmossdk.io/depinject v1.0.0-alpha.4
 	cosmossdk.io/log v1.2.1
 	cosmossdk.io/math v1.2.0
-	cosmossdk.io/store v1.0.0
+	cosmossdk.io/store v1.0.1
 	cosmossdk.io/tools/confix v0.0.0-20231103111158-e83a20081ced
 	cosmossdk.io/x/circuit v0.0.0-20231103111158-e83a20081ced
 	cosmossdk.io/x/evidence v0.0.0-20231103111158-e83a20081ced
