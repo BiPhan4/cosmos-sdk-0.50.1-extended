@@ -50,7 +50,7 @@ func ValidateGenesis(gs *GenesisState) error {
 	return gs.FeePool.ValidateGenesis()
 }
 
-// GetGenesisStateFromAppState returns x/auth GenesisState given raw application
+// GetGenesisStateFromAppState returns x/distribution GenesisState given raw application
 // genesis state.
 func GetGenesisStateFromAppState(cdc codec.Codec, appState map[string]json.RawMessage) GenesisState {
 	var genesisState GenesisState
