@@ -13,7 +13,6 @@ import (
 func AddStub(
 	cdc codec.Codec,
 	accAddr sdk.AccAddress,
-	appendAcct bool,
 	genesisFileURL string,
 	moduleName string,
 ) error {
