@@ -24,7 +24,7 @@ const (
 
 // AddStubCmd returns add-stub cobra Command.
 // This command is just for fleshing out how the genesis file can be edited
-func AddStubCmd(addressCodec address.Codec) *cobra.Command {
+func AddStubCmd(defaultNodeHome string, addressCodec address.Codec) *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "add-stub [address_or_key_name] [coin][,[coin]]",
 		Short: "Add a stub genesis account to genesis.json",
