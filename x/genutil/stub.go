@@ -27,8 +27,8 @@ func AddStub(
 
 	distGenState := distributiontypes.GetGenesisStateFromAppState(cdc, appState)
 
-	fmt.Println("The distribution genesis state is")
-	fmt.Println(distGenState)
+	fmt.Println("The distribution params are")
+	fmt.Println(distGenState.Params.String())
 
 	// TODO
 	// retrieve the interchainaccounts genesis state and unpack the allowed_messages object--is it a []string or []json.RawMessage?
