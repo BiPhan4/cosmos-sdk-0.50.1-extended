@@ -5,7 +5,7 @@ go 1.20
 require (
 	cosmossdk.io/errors v1.0.0
 	cosmossdk.io/log v1.2.1
-	cosmossdk.io/math v1.2.0
+	cosmossdk.io/math v1.4.0
 	github.com/cometbft/cometbft v0.38.0
 	github.com/cosmos/cosmos-db v1.0.0
 	github.com/cosmos/gogoproto v1.4.11
@@ -18,7 +18,7 @@ require (
 	github.com/hashicorp/go-plugin v1.5.2
 	github.com/hashicorp/golang-lru v1.0.2
 	github.com/spf13/cast v1.5.1 // indirect
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.9.0
 	github.com/tidwall/btree v1.7.0
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
 	google.golang.org/grpc v1.59.0
