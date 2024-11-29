@@ -5,7 +5,7 @@ go 1.21
 require (
 	cosmossdk.io/core v0.11.0
 	github.com/cosmos/cosmos-db v1.0.0
-	github.com/stretchr/testify v1.8.4
+	github.com/stretchr/testify v1.10.0
 	pgregory.net/rapid v0.6.2
 )
 
