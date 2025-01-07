@@ -1,11 +1,12 @@
 module cosmossdk.io/tools/confix
 
 go 1.21
+toolchain go1.23.4
 
 require (
 	github.com/cosmos/cosmos-sdk v0.50.0-rc.1
-	github.com/creachadair/atomicfile v0.3.1
-	github.com/creachadair/tomledit v0.0.24
+	github.com/creachadair/atomicfile v0.3.6
+	github.com/creachadair/tomledit v0.0.27
 	github.com/pelletier/go-toml/v2 v2.0.9
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
@@ -138,7 +139,7 @@ require (
 	go.etcd.io/bbolt v1.3.7 // indirect
 	golang.org/x/crypto v0.14.0 // indirect
 	golang.org/x/net v0.17.0 // indirect
-	golang.org/x/sync v0.3.0 // indirect
+	golang.org/x/sync v0.7.0 // indirect
 	golang.org/x/sys v0.13.0 // indirect
 	golang.org/x/term v0.13.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
