@@ -1,6 +1,4 @@
-go 1.21
-
-toolchain go1.21.0
+go 1.21.0
 
 module github.com/cosmos/cosmos-sdk
 
@@ -49,7 +47,7 @@ require (
 	github.com/prometheus/client_golang v1.17.0
 	github.com/prometheus/common v0.45.0
 	github.com/rs/zerolog v1.31.0
-	github.com/spf13/cast v1.5.1
+	github.com/spf13/cast v1.10.0
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
 	github.com/spf13/viper v1.16.0
