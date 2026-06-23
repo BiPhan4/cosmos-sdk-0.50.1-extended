@@ -1,12 +1,12 @@
 module cosmossdk.io/tools/confix
 
-go 1.21
+go 1.21.0
 
 require (
 	github.com/cosmos/cosmos-sdk v0.50.0-rc.1
 	github.com/creachadair/atomicfile v0.3.1
 	github.com/creachadair/tomledit v0.0.24
-	github.com/pelletier/go-toml/v2 v2.0.9
+	github.com/pelletier/go-toml/v2 v2.4.1
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.16.0
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
