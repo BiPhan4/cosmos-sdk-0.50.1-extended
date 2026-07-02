@@ -1,6 +1,4 @@
-go 1.21
-
-toolchain go1.21.0
+go 1.25.0
 
 module github.com/cosmos/cosmos-sdk
 
@@ -57,7 +55,7 @@ require (
 	github.com/tendermint/go-amino v0.16.0
 	golang.org/x/crypto v0.14.0
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d
-	golang.org/x/sync v0.3.0
+	golang.org/x/sync v0.21.0
 	google.golang.org/genproto/googleapis/api v0.0.0-20231012201019-e917dd12ba7a
 	google.golang.org/grpc v1.59.0
 	google.golang.org/protobuf v1.31.0
